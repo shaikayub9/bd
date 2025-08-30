@@ -120,11 +120,15 @@
         font-weight: 300;
         font-style:italic;
         text-align: center;
-        h1 {
-          font-size: 1.4em;
-        }
       }
+
+      h2 {
+        font-weight: 600;
+        margin-bottom: 2rem;
+        color: color-mix(in srgb, var(--default-color), transparent 20%);
+        }
     </style>
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
   </head>
   <body>
       <div class="cake">
@@ -283,12 +287,30 @@
         <rect x="10" y="475.571" fill="#fefae9" width="180" height="4" />
       </svg>
       <div class="text">
-      <h1>Wishing you the happiest birthday, Ayub!</h1>
-      <p class="name"> May this new year of your life be filled with success, good health, and wonderful surprises.</p>
+      <h1> Happy Birthday, my dear Ayub!</h1>
+      <h2 data-aos="fade-up" data-aos-delay="300"> May this new year of your life be filled with 
+        <span class="typed" data-typed-items="success, joy every day, laughter, good health, wonderful surprises, unforgettable moments"></span>
+    </h2>   
+     
       <audio controls>
         <source src="puttina roju jai jailu.mp3" type="audio/mp3"> 
       </audio>
 
       </div>
+
+      <script>
+      const selectTyped = document.querySelector('.typed');
+      if (selectTyped) {
+      let typed_strings = selectTyped.getAttribute('data-typed-items');
+      typed_strings = typed_strings.split(',');
+      new Typed('.typed', {
+      strings: typed_strings,
+      loop: true,
+      typeSpeed: 100,
+      backSpeed: 50,
+      backDelay: 2000
+    });
+  }
+</script>
   </body>
 </html>
